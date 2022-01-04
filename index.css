@@ -15,20 +15,21 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url("https://cdn.pixabay.com/photo/2013/10/16/10/17/clouds-196230_960_720.jpg");
+   background-color: #ccc;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     flex-direction: column;
 }
 
 .hero-container {
-    height: 60%;
+    height: fit-content;
     width: 40%;
     border: 2px solid black;
     box-shadow: 7px 7px 15px black;
     user-select: none;
-    border-radius: 40px;
-    backdrop-filter: brightness(30%);
+    border-radius: 50px;
+    backdrop-filter: brightness(10%);
 }
 
 .input-container {
