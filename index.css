@@ -22,11 +22,16 @@ body {
     flex-direction: column;
 }
 
+.location-timezone {
+    font-size: 2.5rem;
+    text-shadow: 3px 3px grey;
+}
+
 .hero-container {
     height: fit-content;
     width: 40%;
     border: 2px solid black;
-    box-shadow: 7px 7px 15px black;
+    box-shadow: 7px 7px 15px grey;
     user-select: none;
     border-radius: 50px;
     backdrop-filter: brightness(10%);
@@ -66,7 +71,7 @@ i {
 }
 
 .submit {
-width: 10%;
+    width: 10%;
     cursor: pointer;
     border: none;
     background-color: transparent;
@@ -79,7 +84,7 @@ width: 10%;
 }
 
 .celsius {
-    text-shadow: 3px 3px black;
+    text-shadow: 2px 2px grey;
 }
 
 .location {
@@ -87,7 +92,7 @@ width: 10%;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    text-shadow: 3px 3px black;
+    text-shadow: 3px 3px grey;
     margin-top: 2.5rem;
 }
 
@@ -100,11 +105,11 @@ width: 10%;
 
 .degree {
     font-size: 5rem;
-    text-shadow: 8px 8px black;
+    text-shadow: 5px 5px grey;
 }
 
 .description {
-    text-shadow: 3px 3px black;
+    text-shadow: 1px 1px grey;
     font-size: 1.25rem;
 }
 
@@ -115,5 +120,5 @@ width: 10%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-shadow: 3px 3px black;
+    text-shadow: 2px 2px grey;
 }
