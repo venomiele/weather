@@ -14,7 +14,6 @@ async function fetchWeather (city) {
     try {
         const response = await fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&appid=" + apiKey);
         data =  await response.json();
-        console.log(data);
         displayWeather(data);
 
     } catch {
@@ -40,14 +39,11 @@ window.addEventListener("load", () => {
 section.style.display = " none";
 btn.addEventListener("click", (e) => {
     e.preventDefault();
-    if(data.message) {
-        section.style.display = "none"; 
-    } else {
         section.style.display = "block";
         result = search.value;
             fetchWeather(result);
+            document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + result + "')";
             search.value = "";
-    }
         });
     });
 
