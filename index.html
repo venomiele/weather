@@ -8,25 +8,24 @@
     <title>Weather App</title>
 </head>
 <body>
-    <form>
-    <input type="text" class="search" placeholder="Search by city">
-</form>    
+
     <div class="hero-container">
     <div class="input-container">
-        <video class="video" loop muted autoplay>
-            <source src="https://cdn.videvo.net/videvo_files/video/free/2021-04/large_watermarked/210329_06B_Bali_1080p_013_preview.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-          </video>
+          <form>
+            <input type="text" class="search" placeholder="Search by city">
+            <button class="submit"><i class="bi bi-search"></i></button>
+            </form>    
           <div class="location">
               <h1 class="location-timezone">Timezone</h1>
-              <p class="icon">icon</p>
-          </div>
+              <img src="" class="icon" alt="icon">
+              <div class="description"></div>          </div>
           <div class="temperature">
-          <div class="degree">39</div>
-          <div class="description">friggin cold</div>
+          <div class="degree"></div>
     </div>
+    <div class="humidity">
+        <h2 id="humidity">Humidity: 60%</h2>
+        <h2 id="windspeed">Windspeed: 6.2km/h</h2>
     </div>
-    <div class="info-container">
     </div>
 </div>
     <script src="index.js"></script>
