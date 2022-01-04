@@ -7,14 +7,18 @@ let humEl = document.getElementById("humidity");
 let windEl = document.getElementById("windspeed");
 let btn =  document.querySelector(".submit");
 let search =  document.querySelector(".search");
+let section = document.querySelector(".display");
+let data = undefined;
 
 async function fetchWeather (city) {
     try {
         const response = await fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&appid=" + apiKey);
-        const data =  await response.json();
+        data =  await response.json();
+        console.log(data);
         displayWeather(data);
+
     } catch {
-        alert("Something went wrong,please refresh the page!")
+        alert("Something went wrong,or the city may not exist!")
     }
 
 }
@@ -32,22 +36,18 @@ humEl.innerText = "Humidity:" + " " + humidity + "%";
 windEl.innerText = "Windspeed:" + " " + speed + "km/h";
 }
 
+window.addEventListener("load", () => {
+section.style.display = " none";
 btn.addEventListener("click", (e) => {
-e.preventDefault();
-result = search.value;
-fetchWeather(result);
-search.value = "";
-})
-
-
-// window.addEventListener("load", () => {
-//     let long;
-//     let lat;
-//     if(navigator.geolocation) {
-//         navigator.geolocation.getCurrentPosition(position => {
-//             long = position.coords.longitude;
-//             lat = position.coords.latitude;
-//         });
-//     }
-// })
+    e.preventDefault();
+    if(data.message) {
+        section.style.display = "none"; 
+    } else {
+        section.style.display = "block";
+        result = search.value;
+            fetchWeather(result);
+            search.value = "";
+    }
+        });
+    });
 
