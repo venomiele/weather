@@ -29,7 +29,7 @@ body {
 
 .hero-container {
     height: fit-content;
-    width: 40%;
+    width: 50%;
     border: 2px solid black;
     box-shadow: 7px 7px 15px grey;
     user-select: none;
@@ -111,6 +111,7 @@ i {
 .description {
     text-shadow: 1px 1px grey;
     font-size: 1.25rem;
+    text-transform: uppercase;
 }
 
 .humidity {
@@ -121,4 +122,44 @@ i {
     align-items: center;
     flex-direction: column;
     text-shadow: 2px 2px grey;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 1024px) {
+    .hero-container {
+        height: fit-content;
+        width: 80%;
+ 
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .location-timezone {
+        font-size: 2rem;
+    }
+    .hero-container {
+        width: 90%;
+ 
+    }
+
+    .search {
+        font-size: 0.75rem;
+        }
+
+        i {
+            font-size: 1rem;
+        }
+
+        .humidity {
+            font-size: 1rem;
+        }
+
+        .description {
+            font-size: 1rem;
+        }
+
+        .degree {
+            font-size: 4rem;
+        }
 }
